@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$main-bg: hsl(233, 47%, 7%);
+$card-bg: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$main-p: hsla(0, 0%, 100%, 0.75);
+$stat-h: hsla(0, 0%, 100%, 0.6);
+
+$fz-p: 15px;
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: $main-bg;
+    color: $white;
+    margin: 0;
+    padding: 2em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero {
+    background-color: $card-bg;
+    border-radius: .7em;
+    overflow: hidden;
+    text-align: center;
+
+    @media (min-width:768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+ 
+
+    &__picture {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+    &__main {
+        padding: 1em 1.8em;
+        flex-basis: 50%;
+
+        @media (min-width:768px) {
+            padding: 3em;
+        }
+
+    }
+    &__heading {
+        font-family: 'Lexend Deca';
+        font-size: x-large;
+        span {
+            color: $accent;
+        }
+
+        @media (min-width:768px) {
+            font-size: xx-large;
+        }
+    }
+    &__info {
+        font-size: small;
+        line-height: 1.8em;
+        color: $main-p;
+        margin-bottom: 2em;
+        
+        @media (min-width:768px) {
+            font-size: medium;
+        }
+        
+    }
+    &__facts {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-transform: uppercase;
+        
+        
+        @media (min-width:768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.fact {
+    font-size: small;
+    line-height: 1.8em;
+    color: $main-p;
+
+    @media (min-width:768px) {
+        font-size: xx-small;
+    }
+
+}
+.bold {
+    color: $white;
+    font-size: x-large;
+    font-weight: bold;
+
+}
