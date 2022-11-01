@@ -2,7 +2,7 @@
 
 
 $mobile: 375px;
-$desktop: 1440px;
+$desktop: 800px;
 
 $main-bg: hsl(233, 47%, 7%);
 $card-bg: hsl(244, 38%, 16%);
@@ -31,26 +31,26 @@ body {
     border-radius: .7em;
     overflow: hidden;
     text-align: center;
-
-    @media (min-width:768px) {
-        display: flex;
-        flex-direction: row-reverse;
+    display: flex;
+    flex-direction: column;
+    @media (min-width:$desktop) {
         text-align: left;
+        flex-direction: row-reverse;
     }
  
 
     &__picture {
-        img {
-            width: 100%;
-            height: 100%;
-        }
+        flex: 1;
+        background: url(./images/image-header-desktop.jpg), hsl(277, 64%, 61%);
+        background-size: cover; background-blend-mode: multiply;
+        min-height: 300px;
 
     }
     &__main {
         padding: 1em 1.8em;
-        flex-basis: 50%;
+        flex: 1;
 
-        @media (min-width:768px) {
+        @media (min-width:$desktop) {
             padding: 3em;
         }
 
@@ -62,7 +62,7 @@ body {
             color: $accent;
         }
 
-        @media (min-width:768px) {
+        @media (min-width:$desktop) {
             font-size: xx-large;
         }
     }
@@ -72,7 +72,7 @@ body {
         color: $main-p;
         margin-bottom: 2em;
         
-        @media (min-width:768px) {
+        @media (min-width:$desktop) {
             font-size: medium;
         }
         
@@ -84,7 +84,7 @@ body {
         text-transform: uppercase;
         
         
-        @media (min-width:768px) {
+        @media (min-width:$desktop) {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -97,7 +97,7 @@ body {
     line-height: 1.8em;
     color: $main-p;
 
-    @media (min-width:768px) {
+    @media (min-width:$desktop) {
         font-size: xx-small;
     }
 
